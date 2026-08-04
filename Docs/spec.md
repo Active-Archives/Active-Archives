@@ -76,3 +76,7 @@ This would be more of a mechanic of the game like buffs and what not. like using
 
 **RNG System**
 footnote here for future but some form of rng system would be nice for further player retention. This could include a system of items and gear with random roles like Borderlands or Minecraft enchantments. These kind of items would provide buffs as long as they are equipped unlike the materials that can be used as **modifiers** in **Gather**
+
+**Moc**
+
+![alt text](image-1.png)
