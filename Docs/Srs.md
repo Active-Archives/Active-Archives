@@ -34,10 +34,6 @@ These constraints detail how user data will be handled.
 | Constraint | Supporting Functional Requirements |
 | --- | --- |
 | **ORG CON-1: The software will be built around all documentation to the best ability** | All |
-| **CON-2: ** |  |
-| **CON-3: ** |  |
-| **CON-4: ** |  |
-| **CON-5: ** |  |
 
 These constraints detail how organizational policy will be followed.
 
@@ -47,9 +43,6 @@ These constraints detail how organizational policy will be followed.
 | --- | --- |
 | **AA CON-1: Users will be required to have an authenticated account** | FR-1, FR-15, NFR-5 |
 | **AA CON-2: Users will be able to enter the game at any point in time** | NFR-1, NFR-3, NFR-7 |
-| **CON-3: ** |  |
-| **CON-4: ** |  |
-| **CON-5: ** |  |
 
 These constraints detail how authentication and software access will be handled. 
 
@@ -65,11 +58,11 @@ The following user data will be securely stored in a PostgreSQL database hosted 
 * Player Energy
 * Concurrent marketplace listings
 
-* Supporting Functional Requirements: 
-
 **Marketplace Transactions**
 
 Marketplace transactions will be atomic and will support data rollback in the event of failure. If failure occurs, players will retain all items and currency or marketplace listings they had prior to the failure. Audit logs also will store all information relating to marketplace transactions.
+
+* Supporting Functional Requirements: All functional requirements, NFR-4, NFR-5, NFR-6, NFR-11
 
 These requirements detail how data will be managed and how it will flow throughout the application.
 
@@ -88,21 +81,16 @@ These constraints detail how the platform will be handled.
 
 | Constraint | Supporting Functional Requirements |
 | --- | --- |
-| **OP CON-1: ** |  |
-| **CON-2: ** |  |
-| **CON-3: ** |  |
-| **CON-4: ** |  |
-| **CON-5: ** |  |
+| **OP CON-1: The software is free of bugs/issues** | All functional requirements |
+| **OP CON-2: The software will not become compromised if new bugs/issues are discovered** | All functional requirements, NFR-1 |
+| **OP CON-3: The software will maintain a high quality of functionality with many users connected at once** | NFR-1, NFR-2, NFR-3 |
 
-## Data Integreity Constraints
+## Data Integrity Constraints
 
 | Constraint | Supporting Functional Requirements |
 | --- | --- |
-| **DI CON-1: ** |  |
-| **CON-2: ** |  |
-| **CON-3: ** |  |
-| **CON-4: ** |  |
-| **CON-5: ** |  |
+| **DI CON-1: Persistent data will maintain physical and logical independence** | All functional requirements, NFR-4, NFR-5 |
+| **DI CON-2: Persistent data will only change through atomic transactions** | All functional requirements, NFR-4, NFR-5 |
 
 # Traceability
 
@@ -122,41 +110,38 @@ These constraints detail how the platform will be handled.
 
 | Validation Approach | Functional Requirement |
 | --- | --- |
-| ** ** | FR-1 |
-| ** ** | FR-2 |
-| ** ** | FR-3 |
-| ** ** | FR-4 |
-| ** ** | FR-5 |
-| ** ** | FR-6 |
-| ** ** | FR-7 |
-| ** ** | FR-8 |
-| ** ** | FR-9 |
-| ** ** | FR-10 |
-| ** ** | FR-11 |
-| ** ** | FR-12 |
-| ** ** | FR-13 |
-| ** ** | FR-14 |
-| ** ** | FR-15 |
+| **User accounts will be tested in a real-world scenario** | FR-1 |
+| **Gathering activities will be smoke tested and have automated test cases** | FR-2 |
+| **Energy will be smoke tested, have automated tests, and will support asynchronous operations** | FR-3 |
+| **Crafting will be smoke tested and have automated tests** | FR-4 |
+| **Upgrades will be smoke tested and have automated tests** | FR-5 |
+| **Multiplayer activities will be smoke tested and have automated tests that include matchmaking** | FR-6 |
+| **Trading will be smoke tested and have automated tests** | FR-7 |
+| **Questing will be smoke tested and have automated tests** | FR-8 |
+| **Weekly and Daily Systems will be smoke tested and have automated tests, and will support asynchronous operations** | FR-9 |
+| **Character Progression will be smoke tested and have automated tests** | FR-10 |
+| **Modifiers will be smoke tested and have automated tests, and will support asynchronous operations** | FR-11 |
+| **User communication will be smoke tested and have automated tests** | FR-12 |
+| **Inventory and Items will be smoke tested and have automated tests** | FR-13 |
+| **Audit Logging will be smoke tested and have automated tests** | FR-14 |
+| **User Interface will be smoke tested** | FR-15 |
 
 ## Non-Functional Requirement Validation
 
 | Validation Approach | Non-Functional Requirement |
 | --- | --- |
-| ** ** | FR-1 |
-| ** ** | FR-2 |
-| ** ** | FR-3 |
-| ** ** | FR-4 |
-| ** ** | FR-5 |
-| ** ** | FR-6 |
-| ** ** | FR-7 |
-| ** ** | FR-8 |
-| ** ** | FR-9 |
-| ** ** | FR-10 |
-| ** ** | FR-11 |
-| ** ** | FR-12 |
-| ** ** | FR-13 |
-| ** ** | FR-14 |
-| ** ** | FR-15 |
+| **Availability will be validated with logs and statistics from the chosen hosting platform** | NFR-1 |
+| **Performance will be validated with logs to track timings of individual oeprations** | NFR-2 |
+| **Scalability will be validated with strong system architecture** | NFR-3 |
+| **Reliability and Data Integrity will be validated with transaction and audit logs for all data operations** | NFR-4 |
+| **Security will be validated with strict privacy rules** | NFR-5 |
+| **Auditability will be validated with immutable logs for all important operations** | NFR-6 |
+| **Usability will be validated with well-designed gameplay tutorials and user interface** | NFR-7 |
+| **Maintainability will be validated with strong system architecture** | NFR-8 |
+| **Extensibility will be validated with string system architecture** | NFR-9 |
+| **Compatability will be validated with server-side data rules/handling** | NFR-10 |
+| **Recoverability will be validated with data backups along with audits/logs** | NFR-11 |
+| **Fairness and Game Balance will be validated with equal terms of play for all users** | NFR-12 |
 
 # System Environment
 
