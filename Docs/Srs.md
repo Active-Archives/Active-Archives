@@ -649,7 +649,7 @@ These mappings reflect the current system goals, including singleplayer progress
 | --- | --- |
 | **SC-1: User Gathers Materials** | FR-2, FR-3, FR-9, FR-10, FR-11, FR-13, FR-14, FR-15 |
 | **SC-2: User Crafts an Item** | FR-4, FR-13, FR-14, FR-15 |
-| **SC-3: User Upgrades a Gathering Activity** | FR-5, FR-13, FR-14, FR-15 |
+| **SC-3: User Upgrades Gathering Activity** | FR-5, FR-13, FR-14, FR-15 |
 | **SC-4: User Places an Item for Sale** | FR-7, FR-13, FR-14, FR-15 |
 | **SC-5: User Purchases an Item Through Trading** | FR-7, FR-13, FR-14 |
 | **SC-6: User Completes a Quest** | FR-8, FR-10, FR-13, FR-14, FR-15 |
@@ -701,7 +701,7 @@ The non-functional requirements define the quality expectations that apply to th
 ## Traceability Observations
 
 - FR-1 through FR-15 are the current functional requirement identifiers.
-- Energy affects gathering rewards rather than preventing gathering when depleted.
+- Energy affects rewards rather than preventing gameplay when depleted.
 - Exact balance values such as reward rates, energy recovery, loot probabilities, and upgrade costs remain configurable design decisions.
 - Additional content may be added through the existing systems without requiring new core functionality.
 
@@ -734,9 +734,9 @@ The non-functional requirements define the quality expectations that apply to th
 - User authentication and persistent player accounts.
 - Character progression, including levels, experience, classes, perks, and gear.
 - Inventory, items, materials, currency, and persistent player state.
-- Singleplayer gathering activities, including mining, hunting, fishing, gathering, and farming.
-- An energy system that modifies gathering rewards without blocking participation.
-- Randomized gathering rewards and experience.
+- Singleplayer activities, including mining, hunting, fishing, gathering, and farming.
+- An energy system that modifies rewards without blocking participation.
+- Randomized rewards and experience.
 - Crafting and refining, including gear and potion crafting.
 - Activity upgrades for tier, speed, energy, and rewards.
 - Gameplay modifiers.
