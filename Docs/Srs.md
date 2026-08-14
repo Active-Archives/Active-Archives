@@ -1,7 +1,7 @@
 # System Vision
 
 ## Problem
-Currently Massively Multiplayer Online games (MMOs), like World of Warcraft or Destiny 2, require huge amounts of time investment and can easily take over a player's life due to the amount of time needed to make meaningful progress.
+Currently Massively Multiplayer Online games (MMOs), like World of Warcraft or Destiny 2, require huge amounts of time investment and can easily take over a player's life due to the amount of time needed to level up, acquire gear, and remain relevant in the game's economy.
 
 ## Purpose
 Active Archive aims to deliver MMO-like mechanics without requiring players to drown themselves in content or constantly check in, letting players engage on their own schedule and still make meaningful progress.
@@ -55,10 +55,10 @@ Active Archive benefits people who enjoy MMO mechanics and the grind, but who do
 # System Environment
 
 ## User Context
-Players can access the game from any modern browser and begin playing after creating an account. No prior experience with the game is required, and players can engage in short or extended sessions on their own schedule.
+Players can access the game from nost modern browser and begin playing after creating an account. No prior experience with the game is required, and players can engage in short or extended sessions on their own schedule.
 
 ## Physical and Operational Conditions
-The game runs on any modern web browser across desktop and mobile, with no special hardware or software beyond an internet connection. It is cloud-hosted and always available.
+The game runs on most modern web browser across desktop and mobile, with no special hardware or software beyond an internet connection. It is cloud-hosted and always available.
 
 ## External Systems and Services
 The game relies on Clerk for authentication, a PostgreSQL database (hosted on SupaBase) for persistent data, Render for deployment, and Redis for real-time chat and messaging.
