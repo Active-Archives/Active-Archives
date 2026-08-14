@@ -35,7 +35,11 @@ These constraints detail how user data will be handled.
 
 | Constraint | Supporting Functional Requirements |
 | --- | --- |
-| **ORG CON-1: The software will be built around all documentation to the best ability** | All |
+| **ORG CON-1: The software will pass all tests before being pushed to main** | All |
+| **ORG CON-1: The software will be validated in main before being pushed to production** | All |
+| **ORG CON-3: All merges to main must be done through a reviewed pull request** | All |
+| **ORG CON-4: All issues will be tracked through Linear** | All |
+| **ORG CON-5: Version control will be handles through Github with frequent commits** | All |
 
 These constraints detail how organizational policy will be followed.
 
@@ -83,7 +87,7 @@ These constraints detail how the platform will be handled.
 
 | Constraint | Supporting Functional Requirements |
 | --- | --- |
-| **OP CON-1: The software is free of bugs/issues** | All functional requirements |
+| **OP CON-1: The software passes all tests and reviews** | All functional requirements |
 | **OP CON-2: The software will not become compromised if new bugs/issues are discovered** | All functional requirements, NFR-1 |
 | **OP CON-3: The software will maintain a high quality of functionality with many users connected at once** | NFR-1, NFR-2, NFR-3 |
 
@@ -133,14 +137,14 @@ These constraints detail how the platform will be handled.
 | Validation Approach | Non-Functional Requirement |
 | --- | --- |
 | **Availability will be validated with logs and statistics from the chosen hosting platform** | NFR-1 |
-| **Performance will be validated with logs to track timings of individual oeprations** | NFR-2 |
-| **Scalability will be validated with strong system architecture** | NFR-3 |
+| **Performance will be validated with logs to track timings of individual operations** | NFR-2 |
+| **Scalability will be validated with high load testing** | NFR-3 |
 | **Reliability and Data Integrity will be validated with transaction and audit logs for all data operations** | NFR-4 |
 | **Security will be validated with strict privacy rules** | NFR-5 |
 | **Auditability will be validated with immutable logs for all important operations** | NFR-6 |
 | **Usability will be validated with well-designed gameplay tutorials and user interface** | NFR-7 |
-| **Maintainability will be validated with strong system architecture** | NFR-8 |
-| **Extensibility will be validated with string system architecture** | NFR-9 |
+| **Maintainability will be validated with modularly designed and well documented components** | NFR-8 |
+| **Extensibility will be validated with newly added modular components that utilize pre-existing core features** | NFR-9 |
 | **Compatability will be validated with server-side data rules/handling** | NFR-10 |
 | **Recoverability will be validated with data backups along with audits/logs** | NFR-11 |
 | **Fairness and Game Balance will be validated with equal terms of play for all users** | NFR-12 |
