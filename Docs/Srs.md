@@ -55,7 +55,7 @@ Active Archive benefits people who enjoy MMO mechanics and the grind, but who do
 # System Environment
 
 ## User Context
-Players can access the game from nost modern browser and begin playing after creating an account. No prior experience with the game is required, and players can engage in short or extended sessions on their own schedule.
+Players can access the game from most modern browser and begin playing after creating an account. No prior experience with the game is required, and players can engage in short or extended sessions on their own schedule.
 
 ## Physical and Operational Conditions
 The game runs on most modern web browser across desktop and mobile, with no special hardware or software beyond an internet connection. It is cloud-hosted and always available.
@@ -64,7 +64,7 @@ The game runs on most modern web browser across desktop and mobile, with no spec
 The game relies on Clerk for authentication, a PostgreSQL database (hosted on SupaBase) for persistent data, Render for deployment, and Redis for real-time chat and messaging.
 
 ## Summary
-Active Archive is a browser-based game accessible to users of any experience level, running on any modern browser with only an internet connection. It depends on several managed external services to handle authentication, data persistence, deployment, and real-time features.
+Active Archive is a browser-based game accessible to users of any experience level, running on most modern browser with only an internet connection. It depends on several managed external services to handle authentication, data persistence, deployment, and real-time features.
 # Stakeholders
 
 ## Key Stakeholders
