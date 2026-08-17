@@ -36,7 +36,6 @@ Browser based idle mmo game. Players run gathering activities, either single pla
 ### Frontend
 
 Install Node.js LTS, which includes `npm`, once on each development machine.
-You do not need to reinstall it each time you run the frontend.
 
 For the first run after cloning the repository:
 
