@@ -2,7 +2,7 @@ export type DashboardSummary = {
   player: {
     name: string
     level: number
-    title: string
+    className: string
   }
   energy: {
     current: number
@@ -10,7 +10,6 @@ export type DashboardSummary = {
   }
   activity: {
     name: string
-    status: string
     reward: string
   }
   inventory: Array<{
@@ -21,17 +20,16 @@ export type DashboardSummary = {
 
 const dashboardSummary: DashboardSummary = {
   player: {
-    name: 'Rowan Vale',
-    level: 18,
-    title: 'Wayfinder',
+    name: 'Sir Chudmin of Ohio',
+    level: 67,
+    className: 'Chud',
   },
   energy: {
     current: 72,
     maximum: 100,
   },
   activity: {
-    name: 'Whisperwood Foraging',
-    status: 'Ready to begin',
+    name: 'getting mats to crank 90s with',
     reward: 'Mooncap, Ironroot, and gathering XP',
   },
   inventory: [

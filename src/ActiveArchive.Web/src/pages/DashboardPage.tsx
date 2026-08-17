@@ -10,77 +10,69 @@ export function DashboardPage() {
   })
 
   return (
-    <div className="min-h-screen">
-      <header className="border-b border-white/10">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
-          <Link
-            to="/"
-            className="flex items-center gap-3 font-display text-xl text-parchment-50"
-          >
-            <span className="grid size-9 place-items-center rounded-full border border-moss-300/40 bg-moss-400/10 text-xs font-bold tracking-widest text-moss-300">
-              AA
-            </span>
+    <div className="min-h-screen bg-slate-50 text-slate-900">
+      <header className="border-b border-slate-200 bg-white">
+        <nav className="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
+          <Link to="/" className="text-lg font-semibold text-slate-900">
             Active Archive
           </Link>
-          <span className="text-xs font-medium tracking-widest text-parchment-200/55 uppercase">
-            Frontend preview
+          <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
+            Frontend placeholder
           </span>
         </nav>
       </header>
 
-      <main className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
-          <div>
-            <p className="mb-3 text-sm text-moss-300">The archive remembers.</p>
-            <h1 className="max-w-2xl font-display text-4xl leading-tight text-parchment-50 sm:text-6xl">
-              Welcome back{data ? `, ${data.player.name}` : ''}.
-            </h1>
-            {data && (
-              <p className="mt-4 text-parchment-200/65">
-                Level {data.player.level} · {data.player.title}
-              </p>
-            )}
-          </div>
-          {data && (
-            <button
-              type="button"
-              onClick={() => void refetch()}
-              disabled={isFetching}
-              className="rounded-lg border border-white/15 px-4 py-2 text-xs font-semibold tracking-wide text-parchment-200 transition hover:border-moss-300/60 hover:text-moss-300 disabled:cursor-wait disabled:opacity-50"
+      <main className="mx-auto max-w-3xl px-5 py-12 sm:py-16">
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          Dashboard
+        </h1>
+        <p className="mt-3 max-w-2xl text-slate-600">
+          This basic screen confirms that routing, Tailwind CSS, and mocked API
+          data through TanStack Query are working.
+        </p>
+
+        <div className="mt-8">
+          {isPending && (
+            <div
+              role="status"
+              className="rounded-xl border border-slate-200 bg-white p-6 text-sm text-slate-500 shadow-sm"
             >
-              {isFetching ? 'Refreshing…' : 'Refresh mock data'}
-            </button>
+              Loading mock data...
+            </div>
+          )}
+
+          {error && (
+            <div
+              role="alert"
+              className="rounded-xl border border-red-200 bg-red-50 p-6"
+            >
+              <p className="text-sm text-red-700">
+                The mocked API could not be reached.
+              </p>
+              <button
+                type="button"
+                onClick={() => void refetch()}
+                className="mt-4 rounded-lg bg-red-700 px-4 py-2 text-sm font-medium text-white hover:bg-red-800"
+              >
+                Try again
+              </button>
+            </div>
+          )}
+
+          {data && (
+            <>
+              <PlayerSummaryCard summary={data} />
+              <button
+                type="button"
+                onClick={() => void refetch()}
+                disabled={isFetching}
+                className="mt-4 text-sm font-medium text-emerald-700 hover:text-emerald-800 disabled:cursor-wait disabled:opacity-50"
+              >
+                {isFetching ? 'Refreshing...' : 'Refresh mock data'}
+              </button>
+            </>
           )}
         </div>
-
-        {isPending && (
-          <div
-            role="status"
-            className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-sm text-parchment-200/70"
-          >
-            Consulting the archive…
-          </div>
-        )}
-
-        {error && (
-          <div
-            role="alert"
-            className="rounded-3xl border border-red-300/20 bg-red-950/20 p-8"
-          >
-            <p className="text-sm text-red-100">
-              The mocked API could not be reached.
-            </p>
-            <button
-              type="button"
-              onClick={() => void refetch()}
-              className="mt-4 rounded-lg border border-red-200/30 px-4 py-2 text-sm text-red-100"
-            >
-              Try again
-            </button>
-          </div>
-        )}
-
-        {data && <PlayerSummaryCard summary={data} />}
       </main>
     </div>
   )
