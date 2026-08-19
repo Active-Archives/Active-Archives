@@ -33,9 +33,9 @@ const dashboardSummary: DashboardSummary = {
     reward: 'Mooncap, Ironroot, and gathering XP',
   },
   inventory: [
-    { name: 'Ironroot', quantity: 24 },
-    { name: 'Mooncap', quantity: 11 },
-    { name: 'Ancient Bark', quantity: 3 },
+    { name: 'Wood', quantity: 24 },
+    { name: 'Brick', quantity: 67 },
+    { name: 'Metal', quantity: 31 },
   ],
 }
 
