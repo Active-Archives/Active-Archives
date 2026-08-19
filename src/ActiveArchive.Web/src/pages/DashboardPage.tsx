@@ -27,8 +27,8 @@ export function DashboardPage() {
           Dashboard
         </h1>
         <p className="mt-3 max-w-2xl text-slate-600">
-          This basic screen confirms that routing, Tailwind CSS, and mocked API
-          data through TanStack Query are working.
+          this screen makes sure that routing, Tailwind CSS, and mocked API
+          data through TanStack Query are working properly. i hope anyway
         </p>
 
         <div className="mt-8">
