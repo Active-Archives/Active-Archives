@@ -1,5 +1,15 @@
 # Secrets
 .env
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # C# / .NET
 bin/
@@ -7,12 +17,23 @@ obj/
 *.user
 *.suo
 .vs/
-*.log
 
 # React / Node
 node_modules/
 dist/
+dist-ssr/
 .next/
+
+# Editors and IDEs
+**/.vscode/*
+!**/.vscode/extensions.json
+.idea/
+*.ntvs*
+*.sw?
+
+# Frontend-specific IDE project files
+/src/ActiveArchive.Web/**/*.njsproj
+/src/ActiveArchive.Web/**/*.sln
 
 # OS
 .DS_Store
