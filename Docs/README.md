@@ -10,7 +10,7 @@ Browser based idle mmo game. Players run gathering activities, either single pla
 
 | Layer | Technology |
 | --- | --- |
-| **Frontend** | node.js/React |
+| **Frontend** | Vite / React |
 | **Backend** | C# ASP.NET |
 | **Database** | PostgreSQL (Supabase) |
 | **Real Time pub/sub** | Redis |
@@ -33,7 +33,26 @@ Browser based idle mmo game. Players run gathering activities, either single pla
 
 ## Running On Local
 
-TODO
+### Frontend
+
+Install Node.js LTS, which includes `npm`, once on each development machine.
+
+For the first run after cloning the repository:
+
+```bash
+cd src/ActiveArchive.Web
+npm install
+```
+
+For normal day-to-day startup:
+
+```bash
+cd src/ActiveArchive.Web
+npm run dev
+```
+
+Run `npm install` again only when `package.json` or `package-lock.json` changes.
+Open the local URL printed by Vite (typically `http://localhost:5173`).
 
 ---
 
